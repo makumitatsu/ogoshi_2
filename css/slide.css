@@ -1,0 +1,111 @@
+/* スライドショー: 基本スタイル */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+  max-height: 70vh; /* 最大高さを70vhに設定（画面サイズに応じて調整） */
+  padding-bottom: 30%; /* アスペクト比4:3のため、padding-bottomは30% */
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像が枠に収まるように調整 */
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* ボタン */
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(227, 98, 85, 1);
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 2;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button.prev-btn {
+  left: 0;
+}
+
+button.next-btn {
+  right: 0;
+}
+
+button:hover {
+  background: rgba(255, 111, 97, 1);
+}
+
+/* ページネーション */
+.pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.pagination .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.pagination .dot.active {
+  background: white;
+  opacity: 1;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .slideshow-container {
+    max-height: 50vh; /* スマホ画面では高さを50vhに */
+    padding-bottom: 50%; /* アスペクト比を50%に調整 */
+  }
+
+  .slide img {
+    object-fit: cover;
+  }
+
+  /* ボタンのサイズ調整 */
+  button {
+    padding: 12px 16px;
+    font-size: 20px;
+  }
+
+  button.prev-btn {
+    left: 0;
+  }
+
+  button.next-btn {
+    right: 0;
+  }
+
+  .pagination .dot {
+    width: 8px;
+    height: 8px;
+  }
+}
