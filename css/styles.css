@@ -70,6 +70,7 @@ body {
   background-color: #fff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   width: 100%; /* ウィンドウ幅いっぱいに広げる */
+  left: 0; /* 画面左端に配置 */
   z-index: 10;
   padding: 10px 0; /* 内側の余白を追加 */
   max-height: 300px; /* オーバーフローを防ぐために高さを制限 */
