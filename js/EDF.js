@@ -46,62 +46,58 @@ const sections = [
       {
         title: "インストール",
         explanation:
-          "研究室のPCには入ってます。自分のPCに入れたい場合<br>http://www.east-medic.jp/support/software_download/",
-        url: "http://www.east-medic.jp/support/software_download/", // URLを埋め込む
-        image: "img/NeoRec/process0.png", // 画像が必要な場合
+          " GNU Octaveダウンロードサイトからインストーラをダウンロードする<br>オススメはこのサイトを参考にしてください",
+        url: "https://www.lab.kobe-u.ac.jp/csi-applied-optics/sanran/octave_install_win.html", // URLを埋め込む
       },
       {
         title: "起動方法",
         explanation: "研究室のPCか自分のPCでショートカットをクリック",
-        image: "img/NeoRec/process1.png", // 画像が必要な場合
+        image: "img/Octave/process0.png", // 画像が必要な場合
       },
       {
-        title: "メニューの説明",
-        explanation:
-          "赤枠 基本設定: ファイルの設定やサンプリング周波数、脳波計測部位の設定<br>青枠 抵抗の確認: 電極を付けたところの抵抗値が分かる<br>緑枠 再生: 脳波が再生？される。右側の◎のボタンが録画開始",
-        image: "img/NeoRec/process2.png",
+        title: "ソースコード",
+        explanation: "ソースコードは下のファイルをダウンロード",
+        file: "link/alpha20.m",
       },
+
       {
-        title: "基本設定 -ファイル設定-",
+        title: "ワークスペースの設定",
         explanation:
-          "オススメはプロファイルは1人1つ作ること。<br>※他の人にせっかく設定したチャンネル、周波数など消されることが無くなります<br>保存先も自分のファイルを作って、指定する<br>※他の人に間違ってデータが消される事が無くなります<br>サンプリング周波数は500Hzにしましょう<br>※Excelで開けなくなって、解析不可能になる可能性があります",
-        image: "img/NeoRec/process3.png",
+          "作業ファイル(脳波csvデータ)のディレクトリを指定<br>C:/User~... など指定する",
+        image: "img/Octave/process1.png", // 画像が必要な場合
       },
+
       {
-        title: "基本設定 -リファレンス設定-",
-        explanation:
-          "基本的にA1,A2が設定されていて、A1,A2が緑色になっていて、他のFp1やF2といったチャンネルが赤色であればOK",
-        image: "img/NeoRec/process4.png",
+        title: "ワークスペースの確認",
+        explanation: "脳波のcsvデータが確認できれば、OK",
+        image: "img/Octave/process2.png", // 画像が必要な場合
       },
+
       {
-        title: "基本設定 -チャンネル設定-",
+        title: "mファイルの作成",
         explanation:
-          "チャンネルを追加して、ソースのところで測定したい場所を設定する<br>※ソースをディファレンシャル,A1-A2にする",
-        image: "img/NeoRec/process5.png",
+          "スクリプト作成はここをクリックしてできる<br>(今回はmファイルがあるのでOK)",
+        image: "img/Octave/process3.png", // 画像が必要な場合
       },
+
       {
-        title: "抵抗の確認",
-        explanation:
-          "それぞれ設定したチャンネルがあるか確認する<br>※基本的にα波やβ波といった周波数を求めるだけなら、抵抗値は黄色でもOK<br>※事象関連電位を求める際は、緑色の抵抗値が望ましい。ノイズがきついと結果がうまくいかない可能性があります",
-        image: "img/NeoRec/process6.png",
+        title: "フォルダの管理",
+        explanation: "脳波のcsvデータのフォルダの中にmファイルを入れればOK",
+        image: "img/Octave/process4.png", // 画像が必要な場合
       },
+
       {
-        title: "再生",
+        title: "ソースコード(処理)の説明・詳細",
         explanation:
-          "再生ボタンを押すと、波形が出てくる<br>◎マークを押すと録画開始<br>",
-        image: "img/NeoRec/process7.png",
+          "csvファイルは基本1つしかできない。この処理は必要ない<br>※トリガーで切り取ったときだけ、csvファイルがナンバリングされるので、必要<br>1000はサンプリング周波数なので、500Hzで実験してたら、ここを500に変更する<br>1行目は時間Timeなので、2行目から、測定した脳波の行を選択する",
+        image: "img/Octave/process5.png", // 画像が必要な場合
       },
+
       {
-        title: "再生 -録画停止-",
+        title: "mファイルの実行方法",
         explanation:
-          "録画停止ボタンを押すと、保存フォルダにsmファイルとedfファイルが生成されているはず<br>※たまに、NeoRecがフリーズすることがあるが、保存フォルダにsmファイルがあればOK (解析できます)",
-        image: "img/NeoRec/process8.png",
-      },
-      {
-        title: "smファイルしか生成されなかった場合",
-        explanation:
-          "研究室PC限定で、smファイルを右クリックすると、[ ... ]という項目がでてくる<br>その項目をクリックして変換すると、bdfファイルが生成される<br>これは、edfファイル同様解析できるのでOK",
-        image: "img/NeoRec/process9.png",
+          "コマンドウインドウをクリックする<br>mファイルの名前だけ(拡張子は必要ない)を入力すれば、保存フォルダにcsvファイルができている<br>エラー文が出ていないか確認",
+        image: "img/Octave/process6.png", // 画像が必要な場合
       },
     ],
   },
@@ -114,14 +110,25 @@ const sections = [
         title: "ipynbファイルのダウンロード・設定",
         explanation:
           "右クリックで、[リンクのアドレスをコピー]でダウンロードフォルダかなんかに落とすのが良い",
-        image: "img/NVX/trigger-process1.png",
+        image: "img/NVX/trigger-process2.png",
         file: "link/noha_2.ipynb", // Wordファイル
       },
       {
-        title: "リファレンス(A1,A2)",
+        title: "ipynbファイルの使い方",
+        explanation:
+          "Googleドライブにipynbファイルを入れて、ダブルクリックで、そのままGoogle Colabが開かれるはず",
+      },
+      {
+        title: "ソースコードの概要",
         explanation:
           "Psychopyなどで、刺激(画像など)が表示される実験で、トリガーが必要な場合<br>赤黒のケーブルの光センサを画面の端につけることで脳波計と同期してトリガーの波形が取れる<br>よって、刺激が表示されたタイミングの脳波が分かる",
-        image: "img/NVX/trigger-process2.png",
+        image: "img/Python/process1.png",
+      },
+      {
+        title: "プログラムの実行",
+        explanation:
+          "[ ランタイム ] を押して、[ 全てのセル実行でできる ] でできる<br>フォルダのところにzipファイルができているはずで、ダウンロードできる",
+        image: "img/Python/process2.png",
       },
     ],
   },
