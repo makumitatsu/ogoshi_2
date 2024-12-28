@@ -46,10 +46,12 @@ button {
 
 button.prev-btn {
   left: 0;
+  height: 100px;
 }
 
 button.next-btn {
-  right: 0;
+  right: 0;  
+  height: 100px;
 }
 
 button:hover {
