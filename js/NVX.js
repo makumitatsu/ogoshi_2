@@ -115,24 +115,42 @@ const sections = [
     title: "脳波計(WindowsXP)の配線",
     steps: [
       {
-        title: "未定",
-        explanation: "GNDとPo4をくっつける(ジャンパー線みたいなやつ)",
-        // image: "No" は記述しない
+        title: "起動画面・表示",
+        explanation:
+          "Bio Top Miniの背面に単三電池4本を入れる<br>POWERスイッチを押す<br>その後、液晶に表示される",
+        image: "img/WindowsXP/process1.png",
       },
       {
-        title: "未定",
-        explanation: "A1,A2に線をつける(A1,A2を基準として、電位を測る)",
-        // image: "No" は記述しない
+        title: "Bio Top Miniの使い方 (設定)",
+        explanation:
+          "NVXでいうC3,C4,Fzなどにつける電極など、図から適切な電極を使う",
+        image: "img/WindowsXP/process2.png",
       },
       {
-        title: "未定",
-        explanation: "C3,C4など、測定する部位に線をつける",
-        // image: "No" は記述しない
+        title: "VitalRecoder2 （脳波測定ソフトの起動)",
+        explanation: "VitalRecoder2を使う",
+        image: "img/WindowsXP/process3.png",
       },
       {
-        title: "未定",
-        explanation: "※Po4を額につける<br>Po3はトリガーなしなら必要なし",
-        // image: "No" は記述しない
+        title: "チャンネル設定",
+        explanation: "表示から、収録条件でCh(チャンネル)設定ができる",
+        image: "img/WindowsXP/process4.png",
+      },
+      {
+        title: "チャンネル設定",
+        explanation:
+          "Ch(チャンネル)設定ができる<br>※チャンネルが同期してる8CHまでしか測定できない",
+        image: "img/WindowsXP/process5.png",
+      },
+      {
+        title: "録画方法",
+        explanation: "収録ボタンを押せば、収録開始です",
+        image: "img/WindowsXP/process6.png",
+      },
+      {
+        title: "ファイルの変換方法",
+        explanation:
+          "・変換したデータを見つける(KCDファイル)<br>・左上のタブから[ファイル]→上から三番目[テキスト変換]<br>・変換したいKCDファイルを選択<br>・出力先を選択<br>・下の[テキスト出力]<br>・出力完了",
       },
     ],
   },
