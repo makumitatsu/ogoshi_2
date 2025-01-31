@@ -1,46 +1,54 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>トップメニュー</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/slide.css" />
-    <link rel="stylesheet" href="css/video.css" />
-  </head>
-  <body>
-    <header class="tabs-container">
-      <script src="js/tab-show.js"></script>
-    </header>
-    
-    <div class="slideshow-container">
-      <!-- スライド -->
-      <div class="slide" data-link="NVX.html">
-        <img src="img/NVX/surface.png" alt="NVX" />
-      </div>
-      <div class="slide" data-link="NVX.html#neorec">
-        <img src="img/NeoRec/surface.png" alt="NeoRec" />
-      </div>
-      <div class="slide" data-link="NVX.html#windowsXP">
-        <img src="img/WindowsXP/surface.png" alt="WindowsXP" />
-      </div>
-      <div class="slide" data-link="EDF.html#edf">
-        <img src="img/EDF/surface.png" alt="EDFbrowser" />
-      </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>トップメニュー</title>
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="css/slide.css" />
+		<link rel="stylesheet" href="css/video.css" />
+	</head>
+	<body>
+		<header class="tabs-container">
+			<script src="js/tab-show.js"></script>
+		</header>
+		<main class="content">
+			<h1 class="title">脳波計とEDFbrowser,脳波解析の解説サイト</h1>
+		</main>
+		<div class="slideshow-container">
+			<!-- スライド -->
+			<div class="slide" data-link="NVX.html">
+				<img src="img/NVX/surface.png" alt="NVX" />
+			</div>
+			<div class="slide" data-link="NVX.html#neorec">
+				<img src="img/NeoRec/surface.png" alt="NeoRec" />
+			</div>
+			<div class="slide" data-link="NVX.html#windowsXP">
+				<img src="img/WindowsXP/surface.png" alt="WindowsXP" />
+			</div>
+			<div class="slide" data-link="EDF.html#edf">
+				<img src="img/EDF/surface.png" alt="EDFbrowser" />
+			</div>
+			<div class="slide" data-link="NVX.html#headphone">
+				<img src="img/headphone/surface.png" alt="headphone" />
+			</div>
 
-      <!-- ボタン -->
-      <button class="prev-btn">&lt;</button>
-      <button class="next-btn">&gt;</button>
+			<!-- ボタン -->
+			<button class="prev-btn">&lt;</button>
+			<button class="next-btn">&gt;</button>
 
-      <!-- ページネーション -->
-      <div class="pagination"></div>
-    </div>
+			<!-- ページネーション -->
+			<div class="pagination"></div>
+		</div>
 
-    <main class="content">
-      <h1 class="title">脳波計とEDFbrowser,脳波解析の解説サイト</h1>
-    </main>
+		<script src="js/tab.js"></script>
+		<script src="js/slide.js"></script>
 
-    <script src="js/tab.js"></script>
-    <script src="js/slide.js"></script>
-  </body>
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="css/explanation.css" />
+		<link rel="stylesheet" href="css/video.css" />
+		<main id="explanation-js" class="explanation-js"></main>
+		<script src="js/BrainWave.js"></script>
+		<script src="js/explanation-show.js"></script>
+	</body>
 </html>
