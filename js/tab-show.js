@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { label: "NeoRecの設定方法", link: "NVX.html#neorec" },
         { label: "トリガーの取り方", link: "NVX.html#trigger" },
         { label: "脳波計(WindowsXP)の配線", link: "NVX.html#windowsXP" },
+        { label: "ヘッドフォン(脳波計)の設定方法", link: "NVX.html#headphone" },
       ],
     },
     {
