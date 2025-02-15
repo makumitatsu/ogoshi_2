@@ -1,5 +1,18 @@
 const sections = [
 	{
+		id: "Schedule",
+		title: "※スケジュール、絶対見るように、計画立てて",
+		steps: [
+			{
+				title: "スケージュール概要",
+				explanation:
+					"夏休みまでに、実験を何回か行い、改善してください<br>夏休みは遊びましょう<br>僕たちは、12月、1月に毎日夜9時頃まで卒研室に居て、実験を行い、地獄を見ました",
+				image: "img/Schedule/process1.png",
+			},
+		],
+	},
+
+	{
 		id: "BrainWave",
 		title: "脳波測定の基礎",
 		steps: [
@@ -8,7 +21,7 @@ const sections = [
 				explanation:
 					"測定する場所によって、脳の働く場所が違います<br>F3,F4は運動野といって、運動に関係する実験で脳波をとる際に使います<br>※どのような実験を行うかで、測定位置は重要です!!!<br>左右の差をとることが大切です。F3,F4どちらも測定してください<br>同じように、C3,C4とかP3,P4のように左右で測定してください",
 				image: "img/BrainWave/process1.png",
-								url: "https://naraamt.or.jp/Academic/kensyuukai/2005/kirei/nouha_mon/nouha_mon.html", // URLを埋め込む
+				url: "https://naraamt.or.jp/Academic/kensyuukai/2005/kirei/nouha_mon/nouha_mon.html", // URLを埋め込む
 			},
 			{
 				title: "測定部位",
